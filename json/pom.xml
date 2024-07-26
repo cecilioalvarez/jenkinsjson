@@ -11,14 +11,27 @@
 			<artifactId>jackson-core</artifactId>
 			<version>2.17.2</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-<dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-databind</artifactId>
-    <version>2.17.2</version>
-</dependency>
+		<!--
+		https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.17.2</version>
+		</dependency>
 
 	</dependencies>
-
+	<build>
+		<plugins>
+		  <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <mainClass>com.arquitecturajava.LeerJson</mainClass>
+                   
+                </configuration>
+            </plugin>
+		</plugins>
+	</build>
 
 </project>
